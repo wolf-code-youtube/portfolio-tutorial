@@ -1,0 +1,132 @@
+
+@keyframes float{
+    0%,100%{
+      transform: translateY(0);
+    }
+    50%{
+      transform: translateY(-10%);
+    }
+
+  
+}
+.floatimg{
+  animation: float 3s ease-in-out infinite;
+}
+.floatimg img{
+  border-radius: 50%;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.slide-text{
+  animation: slide 1.5s ease-in-out 0.1s; 
+}
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateX(90%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.revolving-elements {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}
+
+.element {
+  position: absolute;
+  width: 50px; /* Adjust size as needed */
+  height: 50px; /* Adjust size as needed */
+  transform-origin: 0 100px; /* Adjust the distance from the center */
+  animation: revolve 10s linear infinite;
+  left:48%;
+}
+
+.element img{
+  border-radius: 50%;
+}
+
+#element1 { animation-delay: -7s; }
+#element2 { animation-delay: -5s; }
+#element3 { animation-delay: -3s; }
+#element4 { animation-delay: -1s; }
+#element5 { animation-delay: -9s; }
+
+@keyframes revolve {
+  0% { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
+}
+
+.central-image {
+  padding-top: 3%;
+  left:50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.central-image img{
+  
+  border-radius: 50%;
+}
+
+.email{
+  position: fixed;
+  bottom: 12%;
+  right:-4%;
+  rotate: 90deg;
+}
+
+.contactnumber{
+  position: fixed;
+  rotate:270deg;
+  bottom : 9%;
+  left:-2%;
+}
+
+.bubble1{
+  animation: bubble-one 10s ease-in-out infinite;
+}
+
+@keyframes bubble-one{
+  0%,100% { transform: rotate(0deg) translateX(5px) ; }
+  50% { transform: rotate(45deg) translateX(5px); }
+}
+
+.bubble2{
+  animation: bubble-two 4s ease-in-out infinite;
+}
+
+@keyframes bubble-two{
+  0%,100%{
+    transform: translateY(0%);
+  }
+  50%{
+    transform: translateY(-60%);
+  }
+}
+
+.bubble3{
+  animation: bubble-three 10s ease-in-out infinite;
+}
+
+@keyframes bubble-three{
+  0%,100%{
+    transform: translateX(0%);
+  }
+  50%{
+    transform: translateX(-60%);
+  }
+}
